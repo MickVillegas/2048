@@ -10,3 +10,5 @@ CMD ["nginx", "-g", "daemon off;"]
 #docker tag nombre actual nombre nuevo: hace una copia renombrada 
 
 #docker push nombre imagen para subir la imagen
+#https://github.com/josejuansanchez/2048-github-actions/tree/main/.github/workflows para la actividad nueva
+#https://github.com/josejuansanchez/2048-github-actions.git
