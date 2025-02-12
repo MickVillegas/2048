@@ -133,5 +133,5 @@ jobs:
 Y le damos al boton commit changes, una vez hecho eso nos iremos a actions y podremos publicar la imagen a dockerhub, le damos click en publish image on dockerhub > run workflow > run workflow y nos ejecutará la accion, cuando haya terminado y haya mostrado un  "tic verde" es que todo ha ido bien y se ha hecho la accion, si vamos a nuestra cuenta de dockerhub y miramos nuestras imagenes veremos que se ha publicado la imagen  
 
 ![imagen](./img/nose4.png)  
-
+![imagen](./img/nose5.png)  
 
