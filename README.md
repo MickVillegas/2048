@@ -26,25 +26,36 @@ CMD ["nginx", "-g", "daemon off;"]: por ultimo ejecutamos un comando de terminal
 
 ## Creacion de acciones(no bancarias)
 Para ello tendremos que ir a nuestro repositorio de github donde tenemos subido nuestro Dockerfile, nos dirigiremos a donde pone settings    
-imagen  
-En settings nos fijaremos al panel de la izquierda y b¡uscaremos Security y seleccionaremos secretis and variables donde encontraremos la seccion envioriment secrets, ahí le pulsamos a manage secrets, ahi nos pedira poner un nombre de variable y un secreto, estos seran tockens que tenemos que crear en dockerhub  
+![imagen](./img/2.png)
+En settings nos fijaremos al panel de la izquierda y buscaremos Security y seleccionaremos secretis and variables donde encontraremos la seccion envioriment secrets, ahí le pulsamos a new reposity secrets, ahi nos pedira poner un nombre de variable y un secreto, estos seran tockens que tenemos que crear en dockerhub  
 
-imagen  
-imagen  
+![imagen](./img/3.png)
 
-Para crear un tocken en github iremos a la configuracion de nuestro perfil, seleccionamos la opcion personal accesstockens y luego le damos al boton azul generate new tocken  
-imagen  
-imagen  
-imagen  
+Para crear un tocken en github iremos a la configuracion de nuestro perfil, seleccionamos la opcion personal access tockens y luego le damos al boton azul generate new tocken  
+
+![imagen](./img/4.png)
+![imagen](./img/5.png)
+![imagen](./img/6.png)  
+
 aqui le daremos una descripcion al tocken, le pondremos que no tiene fecha de caducidad y sobretodo le daremos permisos de lecturta, escritura y eliminacion  
-imagen  
-Entonces nos dará dos comandos, el primero el login de docker con nuestro nombre de usuario donde solo copiaremos el nombre de usuario y una contraseña para acceder al tocken
-imagen  
-Entonces en github nos crearemos una variable DOCKERHUB_USERNAME cullo secreto será el nombre de usuario generado en tel tocken de dockerhub y crearemos otro secreto mas que lo llamaremos DOCKERHUB_TOKEN cullo secreto será la clave generada en el token de en dockerhub  
-imagen  
-imagen  
 
-Ahora nos iremos a actions en nuestro repositorio de github y la damos a new workflow, nos creará una archivo, en mi caso llamado main.yml,  pegaremos y guardaremos el siguiente codigo en el  
+![imagen](./img/7.png)  
+
+Entonces nos dará dos comandos, el primero el login de docker con nuestro nombre de usuario donde solo copiaremos el nombre de usuario y una contraseña para acceder al tocken  
+
+![imagen](./img/8.png)  
+
+Entonces en github nos crearemos una variable DOCKERHUB_USERNAME cullo secreto será el nombre de usuario generado en tel tocken de dockerhub y crearemos otro secreto mas que lo llamaremos DOCKERHUB_TOKEN cullo secreto será la clave generada en el token de en dockerhub  
+
+![imagen](./img/9.png)
+![imagen](./img/12.png)  
+
+Ahora nos iremos a actions en nuestro repositorio de github y la damos a new workflow > set up new workflow yourself
+
+imagen
+imagen
+
+nos creará un archivo txt, en mi caso llamado main.yml, donde pegaremos y guardaremos el siguiente codigo en el  
 
 ```
 name: Publish image to Docker Hub
@@ -116,5 +127,9 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max  
 ```
+imagen
 
+Y le damos al boton commit changes, una vez hecho eso nos iremos a actions y podremos publicar la imagen a dockerhub, le damos click en publish image on dockerhub > run workflow > run workflow y nos ejecutará la accion, cuando haya terminado y haya mostrado un  "tic verde" es que todo ha ido bien y se ha hecho la accion, si vamos a nuestra cuenta de dockerhub y miramos nuestras imagenes veremos que se ha publicado la imagen
+
+imagen
 
