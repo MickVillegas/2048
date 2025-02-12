@@ -50,12 +50,14 @@ Entonces en github nos crearemos una variable DOCKERHUB_USERNAME cullo secreto s
 ![imagen](./img/9.png)
 ![imagen](./img/12.png)  
 
-Ahora nos iremos a actions en nuestro repositorio de github y la damos a new workflow > set up new workflow yourself
+Ahora nos iremos a actions en nuestro repositorio de github y la damos a new workflow > set up new workflow yourself  
 
-imagen
-imagen
+![imagen](./img/nose.png)
+![imagen](./img/nose2.png)  
 
 nos creará un archivo txt, en mi caso llamado main.yml, donde pegaremos y guardaremos el siguiente codigo en el  
+
+![imagen](./img/nose3.png)  
 
 ```
 name: Publish image to Docker Hub
@@ -127,9 +129,9 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max  
 ```
-imagen
 
-Y le damos al boton commit changes, una vez hecho eso nos iremos a actions y podremos publicar la imagen a dockerhub, le damos click en publish image on dockerhub > run workflow > run workflow y nos ejecutará la accion, cuando haya terminado y haya mostrado un  "tic verde" es que todo ha ido bien y se ha hecho la accion, si vamos a nuestra cuenta de dockerhub y miramos nuestras imagenes veremos que se ha publicado la imagen
+Y le damos al boton commit changes, una vez hecho eso nos iremos a actions y podremos publicar la imagen a dockerhub, le damos click en publish image on dockerhub > run workflow > run workflow y nos ejecutará la accion, cuando haya terminado y haya mostrado un  "tic verde" es que todo ha ido bien y se ha hecho la accion, si vamos a nuestra cuenta de dockerhub y miramos nuestras imagenes veremos que se ha publicado la imagen  
 
-imagen
+![imagen](./img/nose4.png)  
+
 
