@@ -1,4 +1,4 @@
-# Practica 2048
+# Practica Github actions - 2048
 
 Esta practica se divide en dos partes, por un lado la configuracion de una imagen docker haciendo un dockerfile y crearemos acciones en github para que suba automaticamente la imagen a dockerhub
 
